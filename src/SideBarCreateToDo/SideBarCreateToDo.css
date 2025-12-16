@@ -1,0 +1,49 @@
+.sidebar {
+  position: fixed;
+  /* Fijo en la pantalla */
+  top: 0;
+  right: 0;
+  width: 650px;
+  /* Ancho de la barra */
+  height: 100%;
+  background-color: #f4f4f4;
+  border-right: 1px solid #ccc;
+  transform: translateX(100%);
+  /* Oculto por defecto */
+  transition: transform 0.3s ease-in-out;
+  /* Transición suave */
+  z-index: 1000;
+  /* Asegura que esté encima de otros elementos */
+}
+
+.sidebar.open {
+  transform: translateX(0);
+  /* Visible al añadir la clase 'open' */
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.add-btn {
+  margin-left: 10px;
+}
+
+/* Estilos adicionales para el contenido */
+.sidebar ul {
+  list-style: none;
+  padding: 20px;
+}
+
+.sidebar li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px 0;
+}
